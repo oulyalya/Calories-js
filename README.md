@@ -1,1 +1,1 @@
-# Calories-js
+# Calories calculator

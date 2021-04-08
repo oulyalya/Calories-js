@@ -1,0 +1,149 @@
+@font-face {
+  font-family: Montserrat;
+  src: local(Montserrat), url(font/Montserrat-Regular.ttf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  font-family: Montserrat, "Verdana", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 50px; /* =========================== temp =========================== */
+  max-width: 320px;
+  background-color: white; /* =========================== temp =========================== */
+  padding: 20px 15px;
+}
+
+.result-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  min-height: 100px;
+  background-color: lightblue;
+}
+
+.result-text {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: auto;
+  text-align: right;
+  background-color: lightblue;
+  word-wrap: break-word;
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 40px;
+  font-family: Montserrat, "Verdana", sans-serif;
+  line-height: 1;
+  outline: 0 none;
+  border: 0 none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.button--percent {
+  font-size: 30px;
+}
+
+.light .container {
+  background-color: white;
+}
+
+.light .button:hover {
+  background-color: #fafafa;
+}
+
+.light .button:active {
+  background-color: #fafafa;
+}
+
+.light .button--colored {
+  color: #e8194b;
+}
+
+.light .change-theme-color {
+  fill: black;
+}
+
+.dark .container {
+  background-color: black;
+}
+
+.dark .button {
+  color: white;
+}
+
+.dark .button:hover {
+  background-color: #0d0d0d;
+}
+
+.dark .button:active {
+  background-color: #0d0d0d;
+}
+
+.dark .button--colored {
+  color: #e8194b;
+}
+
+.dark .change-theme-color {
+  fill: white;
+}
+
+.button--clear {
+  padding-right: 3px;
+  padding-bottom: 1px;
+}
+
+.button.button--bg {
+  padding-top: 3px;
+  background-color: #e8194b;
+}
+
+.button.button--bg:hover {
+  background-color: #d01945;
+}
+
+.button.button--bg:active {
+  background-color: #d01945;
+}
+/* =========================== temp =========================== */
+body {
+  background-color: pink;
+}

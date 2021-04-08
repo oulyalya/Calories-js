@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator light" id="calculator">
+        <div class="container">
+            <div class="result-wrapper"><span class="result-text" id="result">0</span></div>
+            <!-- <div class="buttons-wrapper">
+                <div class="button button--colored button--clear" id="clear">c</div>
+                <div class="button button--colored" id="remove-symbol">&larr;</div>
+                <div class="button button--colored button--percent" onclick="alert('fdfk')">%</div>
+                <div class="button button--insert button--colored" onclick="insert('/')">&divide;</div>
+                <div class="button button--insert" onclick="insert('7')">7</div>
+                <div class="button button--insert" onclick="insert('8')">8</div>
+                <div class="button button--insert" onclick="insert('9')">9</div>
+                <div class="button button--insert button--colored" onclick="insert('*')">&times;</div>
+                <div class="button button--insert" onclick="insert('4')">4</div>
+                <div class="button button--insert" onclick="insert('5')">5</div>
+                <div class="button button--insert" onclick="insert('6')">6</div>
+                <div class="button button--insert button--colored" onclick="insert('-')">&ndash;</div>
+                <div class="button button--insert" onclick="insert('1')">1</div>
+                <div class="button button--insert" onclick="insert('2')">2</div>
+                <div class="button button--insert" onclick="insert('3')">3</div>
+                <div class="button button--insert button--colored">+</div>
+                <div class="button button--insert button--colored" id="themeToggle">
+                    <svg width="22" height="21" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="change-theme-color" d="M20.8183 0C18.3496 0 16.0387 1.13061 14.5 3.02494C12.9613 1.13055 10.6505 0 8.1817 0C3.67032 0 0 3.71252 0 8.27592C0 11.8492 2.10648 15.9824 6.26081 20.5605C9.45789 24.0836 12.9358 26.8114 13.9255 27.5636L14.4998 28L15.0741 27.5637C16.0638 26.8115 19.5419 24.0837 22.739 20.5606C26.8935 15.9825 29 11.8493 29 8.27592C29 3.71252 25.3297 0 20.8183 0ZM21.3304 19.2526C18.7007 22.1504 15.8715 24.4929 14.4999 25.5725L14.5 6.73295L15.3362 5.20726C16.4426 3.18831 18.5432 1.93404 20.8183 1.93404C24.2754 1.93404 27.0879 4.77892 27.0879 8.27585C27.0879 11.3063 25.097 15.102 21.3304 19.2526Z" fill="#E8194B"/>
+                        <path fill="currentColor" d="M21.3304 19.2526C18.7007 22.1504 15.8715 24.493 14.4999 25.5725L14.5 6.73296L15.3362 5.20727C16.4426 3.18832 18.5432 1.93405 20.8183 1.93405C24.2754 1.93405 27.0879 4.77893 27.0879 8.27586C27.0879 11.3063 25.097 15.102 21.3304 19.2526Z" fill="black"/>
+                    </svg>
+                </div>
+                <div class="button button--insert" onclick="insert('0')">0</div>
+                <div class="button button--insert" onclick="insert('.')">.</div>
+                <div class="button button--bg" id="equal">=</div>
+            </div> -->
+            
+            <div class="buttons-wrapper">
+                <div class="button button--colored button--clear" id="clear">c</div>
+                <div class="button button--colored" id="remove-symbol">&larr;</div>
+                <div class="button button--colored button--percent" onclick="alert('fdfk')">%</div>
+                <div class="button button--insert button--colored" data-symbol="/">&divide;</div>
+                <div class="button button--insert" data-symbol="7">7</div>
+                <div class="button button--insert" data-symbol="8">8</div>
+                <div class="button button--insert" data-symbol="9">9</div>
+                <div class="button button--insert button--colored" data-symbol="*">&times;</div>
+                <div class="button button--insert" data-symbol="4">4</div>
+                <div class="button button--insert" data-symbol="5">5</div>
+                <div class="button button--insert" data-symbol="6">6</div>
+                <div class="button button--insert button--colored" data-symbol="-">&ndash;</div>
+                <div class="button button--insert" data-symbol="1">1</div>
+                <div class="button button--insert" data-symbol="2">2</div>
+                <div class="button button--insert" data-symbol="3">3</div>
+                <div class="button button--insert button--colored" data-symbol="+">+</div>
+                <div class="button button--colored" id="themeToggle">
+                    <svg width="22" height="21" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="change-theme-color" d="M20.8183 0C18.3496 0 16.0387 1.13061 14.5 3.02494C12.9613 1.13055 10.6505 0 8.1817 0C3.67032 0 0 3.71252 0 8.27592C0 11.8492 2.10648 15.9824 6.26081 20.5605C9.45789 24.0836 12.9358 26.8114 13.9255 27.5636L14.4998 28L15.0741 27.5637C16.0638 26.8115 19.5419 24.0837 22.739 20.5606C26.8935 15.9825 29 11.8493 29 8.27592C29 3.71252 25.3297 0 20.8183 0ZM21.3304 19.2526C18.7007 22.1504 15.8715 24.4929 14.4999 25.5725L14.5 6.73295L15.3362 5.20726C16.4426 3.18831 18.5432 1.93404 20.8183 1.93404C24.2754 1.93404 27.0879 4.77892 27.0879 8.27585C27.0879 11.3063 25.097 15.102 21.3304 19.2526Z" fill="#E8194B"/>
+                        <path fill="currentColor" d="M21.3304 19.2526C18.7007 22.1504 15.8715 24.493 14.4999 25.5725L14.5 6.73296L15.3362 5.20727C16.4426 3.18832 18.5432 1.93405 20.8183 1.93405C24.2754 1.93405 27.0879 4.77893 27.0879 8.27586C27.0879 11.3063 25.097 15.102 21.3304 19.2526Z" fill="black"/>
+                    </svg>
+                </div>
+                <div class="button button--insert" data-symbol="0">0</div>
+                <div class="button button--insert" data-symbol=".">.</div>
+                <div class="button button--bg" id="equal">=</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
